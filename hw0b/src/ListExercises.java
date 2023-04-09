@@ -26,12 +26,14 @@ public class ListExercises {
     /** Returns a list containing the common item of the two given lists */
     public static List<Integer> common(List<Integer> L1, List<Integer> L2) {
          List<Integer> commonLst = new ArrayList<>();
-         int ptr = 0;
-         while (ptr < L1.size() && ptr < L2.size()) {
-             if (L1.get(ptr) == L2.get(ptr)) {
-                 commonLst.add(L1.get(ptr));
+         for (int i = 0; i < L1.size(); i++) {
+             for (int j = 0; j < L2.size(); j++) {
+                 if (L1.get(i) == L2.get(j)) {
+                     commonLst.add(L1.get(i));
+                 }
              }
          }
+
          return commonLst;
     }
 
